@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context="org.tensorflow.lite.examples.ocr.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+        <!--            android:src="@drawable/tfl2_logo_dark"-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nsut_logo"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/images_container"
+        android:layout_width="match_parent"
+        android:layout_height="532dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/text_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tfe_using_first_image" />
+
+        <ImageView
+            android:id="@+id/result_imageview"
+            android:layout_width="178dp"
+            android:layout_height="149dp"
+            android:contentDescription="@string/tfe_result_image_description"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="180dp"
+            android:layout_height="178dp"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/tfe_is_bottom_sheet_layout"
+        android:layout_height="228dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
